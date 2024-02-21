@@ -1,10 +1,10 @@
-CREATE TABLE gda-capstone-01.cyclistic23.cleaned AS (
-  SELECT 
-  ride_id, 
+CREATE TABLE gda-capstone-01.cyclistic23.cleaned23 AS (
+  SELECT  
+  t1.ride_id,
   rideable_type,
   started_at,
   ended_at,
-  ride_length_in_mins,
+  ride_length,
   CASE 
   EXTRACT(MONTH FROM started_at)
     WHEN 1 THEN 'January'
@@ -38,13 +38,16 @@ CREATE TABLE gda-capstone-01.cyclistic23.cleaned AS (
   end_lat,
   end_lng,
   member_casual,
-FROM gda-capstone-01.cyclistic23.combined AS time_1
-JOIN 
-  (SELECT ride_id,
-   TIMESTAMP_DIFF(ended_at, started_at, MINUTE) AS ride_length_in_mins
-  FROM gda-capstone-01.cyclistic23.combined) AS time_2
-USING(ride_id)
-WHERE ride_length_in_mins > 1 AND ride_length_in_mins < 1440 AND
+FROM gda-capstone-01.cyclistic23.combined AS t1
+JOIN (
+    SELECT ride_id, (
+      EXTRACT(HOUR FROM (ended_at - started_at)) * 60 +
+      EXTRACT(MINUTE FROM (ended_at - started_at)) +
+      EXTRACT(SECOND FROM (ended_at - started_at)) / 60) AS ride_length
+    FROM gda-capstone-01.cyclistic23.combined
+  ) t2 
+  ON t1.ride_id = t2.ride_id
+WHERE ride_length > 1 AND ride_length < 1440 AND
   start_station_name IS NOT NULL AND
   start_station_id IS NOT NULL AND
   end_station_name IS NOT NULL AND
