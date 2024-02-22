@@ -28,10 +28,11 @@ Three questions will guide the future marketing program:
 
 ### 3. Process
 The foundation of this analysis relies on data from the year **2023**, and the procedures for handling this data are outlined as follows:
-✿ [Data Combining] ()
 
-✿ [Data Exploration] ()
+✿ [Data Combining](https://github.com/keniasaa/coursera-cyclistic23/blob/main/01.%20Data%20Combining.sql)
 
-✿ [Data Cleaning] ()
+✿ [Data Exploration](https://github.com/keniasaa/coursera-cyclistic23/blob/main/02.%20Data%20Exploration.sql)
 
-✿ [Data Analysis] ()
+✿ [Data Cleaning](https://github.com/keniasaa/coursera-cyclistic23/blob/main/03.%20Data%20Cleaning.sql)
+
+✿ [Data Analysis](https://github.com/keniasaa/coursera-cyclistic23/blob/main/04.%20Data%20Analysis.sql)
