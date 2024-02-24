@@ -27,12 +27,72 @@ Three questions will guide the future marketing program:
 - Data visualization - [Tableau](https://public.tableau.com/views/Cyclistic23_updated/Totaltripsmc?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
 
 ### 3. Process
-The foundation of this analysis relies on data from the year **2023**, and the procedures for handling this data are outlined as follows:
+On this occasion, I utilized data spanning from January 2023 to December 2023, resulting in a total of 12 files in CSV format. Each file contains attributes providing information about ride ID, bike type, start station, end station, and membership type of the riders. The column names are as follows: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual.
 
-✿ [Data Combining](https://github.com/keniasaa/coursera-cyclistic23/blob/main/01.%20Data%20Combining.sql)
+#### Data Combining
+✿ SQL Query: [Data Combining](https://github.com/keniasaa/coursera-cyclistic23/blob/main/01.%20Data%20Combining.sql)
 
-✿ [Data Exploration](https://github.com/keniasaa/coursera-cyclistic23/blob/main/02.%20Data%20Exploration.sql)
+During the data combining step, I uploaded 12 CSV files to BigQuery. Afterward, I merged these 12 files into one CSV file, and it now contains a total of 5,719,877 rows.
 
-✿ [Data Cleaning](https://github.com/keniasaa/coursera-cyclistic23/blob/main/03.%20Data%20Cleaning.sql)
+#### Data Exploration
+✿ SQL Query: [Data Exploration](https://github.com/keniasaa/coursera-cyclistic23/blob/main/02.%20Data%20Exploration.sql)
 
-✿ [Data Analysis](https://github.com/keniasaa/coursera-cyclistic23/blob/main/04.%20Data%20Analysis.sql)
+In the data exploration phase, let's take a look at some findings I've come across.
+- The following table displays all the columns present in the file along with their respective data types
+  ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/f639f45e-59c8-40f0-a1eb-16af3de1b1b2)
+
+- The table below illustrates all columns that contain __null values__
+![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/d9a16578-6ef6-4241-840f-8598ed90ebe0)
+![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/5ab72d58-738d-46c3-a8fc-2c9b4491196c)
+
+  We can observe in the table that there are columns with null values, namely in the following fields: start_station_name, start_station_id, end_station_name, end_station_id, end_lat, and end_lng.
+
+- Now, let's take a look at how many bike types are available.
+  
+  ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/17f1bff8-2e43-46ce-bc0f-43e5809270d7)
+  
+  There are three bike types available: electric, classic, and docked.
+
+- Now, let's check if there is any incoming data that indicates riders with a duration of less than one minute or more than 24 hours, as this could represent outlier data that is advisable to be excluded.
+
+  ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/abce1e01-27f5-4700-8d8a-1e9f4113e9b5)
+
+  ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/df48c181-57c5-41f0-9cfd-069262d857a0)
+
+- The table below illustrates the rider types at Cyclistic.
+
+  ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/1f93cd3f-ac1a-4626-b6ef-b1869652e646)
+
+  There are two rider types: member and casual.
+
+#### Data Cleaning
+✿ SQL Query: [Data Cleaning](https://github.com/keniasaa/coursera-cyclistic23/blob/main/03.%20Data%20Cleaning.sql)
+
+  After exploring the data, it's time for some data cleaning with the following modifications: 
+  1. Removing data with null values
+  2. Adding columns for ride duration, month, and day of the week
+  3. Eliminating data with trip durations less than one minute and more than 24 hours, as such data is considered outliers. 
+
+#### Data Analysis and Visualization
+✿ SQL Query: [Data Analysis](https://github.com/keniasaa/coursera-cyclistic23/blob/main/04.%20Data%20Analysis.sql)
+
+✿ Tableau Visualization: [Tableau](https://public.tableau.com/views/Cyclistic23_updated/Totaltripsmc?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
+ 
+  - Looking at the pie chart, it's evident that members constitute 64.53% of the total rides in 2023, while casual riders make up 35.47%. This implies that in 2023, Cyclistic had more riders from the casual category than members.
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/a5902aaf-b521-480f-891c-1a8c9fa4246b)
+
+  - Analyzing the bike types offered, it's evident that classic bikes are favored by riders, both members and casual users. Electric bikes come in second place, and docked bikes are less popular, with only 1.78% of casual riders using them in 2023. Members take a larger share than casual riders in terms of the number of rides taken on both classic and electric bikes.
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/9ef7afbb-2de0-40b2-aa0e-a4536f1afc45)
+
+  - Let's examine Cyclistic usage throughout the year. We observe high usage from May to September, peaking in August. It can be assumed that people use Cyclistic services from early to late summer. During the spring in April and the fall in October and November, usage tends to be moderate. Usage is relatively low in December, January, and February, considering these are winter months.
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/1fbcc802-cba5-4ca0-8462-26978970bb42)
+
+    
+  - Looking at the usage duration, the peak usage duration occurs in July, aligning with the previously mentioned data that indicates a higher Cyclistic ridership during the summer season. However, the duration for casual riders surpasses that of members. The duration gap for casual riders sees a drastic increase from March to April. For both membership types, usage declines as we transition into the fall and further decreases in the winter season.
+
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/7900e944-cb45-4152-a1cc-99f205448957)
+
+
+
+
+
