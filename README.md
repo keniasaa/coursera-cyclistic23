@@ -92,6 +92,39 @@ In the data exploration phase, let's take a look at some findings I've come acro
 
     ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/7900e944-cb45-4152-a1cc-99f205448957)
 
+  - The following chart provides an overview of Cyclistic riders on a weekly basis. It is evident that the highest number of users occurs on Saturday, with Thursday following closely in second place. During weekdays, member riders dominate, while on weekends, the composition of member and casual riders is balanced.
+  
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/ffb9c335-5d3b-4da5-811e-a63013bf0c39)
+
+  - The line chart below illustrates the weekly duration of Cyclistic riders. For casual riders, the longest usage duration occurs on Sunday, while for members, it peaks on Saturday. It's noticeable that over the weekends, the riding duration is quite extensive, decreases on Monday, remains stable during weekdays, and then rises again on Saturday.
+  
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/e444cc2f-8469-4710-a29c-653af12b26e9)
+
+  - Let's take a look at the top 10 starting stations where Cyclistic riders initiate their journeys. It's evident that a significant portion, accounting for 17.17% of riders, start their trips from the Streeter Dr & Grand Ave station.
+  
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/41d21c88-57e7-4ec3-901b-0a614d2f1fda)
+
+  - Here's the list of the top 10 stations where riders conclude their journeys. Similar to the starting stations, Streeter Dr & Grand Ave station holds the first position at the ending station as well, with a percentage of 26.69%.
+  
+    ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/8f87e185-1003-4f6e-8b25-adfc4ea8c22f)
+
+### 4. Summary
+
+    |**Member**|**Casual**|
+    |------|------|
+    |Engages more with Cyclistic|Constitutes a smaller proportion of Cyclistic ridership|
+    |Prefers riding on weekdays |Prefers riding on weekends|
+    |Shows a tendency to use classic bikes |Only casual riders who utilize docked bikes, at a percentage of only 1.78%|
+    |Dominates ridership throughout the year, with a peak from May to September|Engages more with Cyclistic from May to September, with reduced usage during the winter season|
+    |Riding durations tend to be short|Riding durations are more than double on average|
+
+### 5. Act
+
+    
+    
+
+
+
 
 
 
