@@ -108,18 +108,40 @@ In the data exploration phase, let's take a look at some findings I've come acro
   
     ![image](https://github.com/keniasaa/coursera-cyclistic23/assets/157902229/8f87e185-1003-4f6e-8b25-adfc4ea8c22f)
 
+
 ### 4. Summary
 
-    |**Member**|**Casual**|
-    |------|------|
-    |Engages more with Cyclistic|Constitutes a smaller proportion of Cyclistic ridership|
-    |Prefers riding on weekdays |Prefers riding on weekends|
-    |Shows a tendency to use classic bikes |Only casual riders who utilize docked bikes, at a percentage of only 1.78%|
-    |Dominates ridership throughout the year, with a peak from May to September|Engages more with Cyclistic from May to September, with reduced usage during the winter season|
-    |Riding durations tend to be short|Riding durations are more than double on average|
+  #### Member
+  - Engages more with Cyclistic
+  - Prefers riding on weekdays
+  - Shows a tendency to use classic bikes
+  - Dominates ridership throughout the year, with a peak from May to September
+  - Riding durations tend to be short
+
+  #### Casual
+  - Constitutes a smaller proportion of Cyclistic ridership
+  - Prefers riding on weekends
+  - Only casual riders who utilize docked bikes, at a percentage of only 1.78%
+  - Engages more with Cyclistic from May to September, with reduced usage during the winter season
+  - Riding durations are more than double on average
 
 ### 5. Act
+  After identifying the characteristics of both member and casual riders, we can provide recommendations to the marketing team for revenue enhancement:
+  
+  ★ Introduce special weekend benefits.
+  
+  ★ Initiate Cyclistic promotions with diverse advertisements at each station during the spring to attract a broader user base.
 
+  ★ During the summer, maintain rider engagement by offering additional benefits for both members and casual riders.
+
+  ★ Create enticing promotions targeting the working professional and student demographics to boost weekday ridership.
+
+  ★ Focus docked bike services in tourist destinations or city parks.
+
+  ★ Given the lower rider engagement during the winter season, in addition to offering significant discounts for both member and casual riders, consider establishing an indoor Cyclistic facility. This way, riders can engage in physical activities, and members can also take advantage of their memberships.
+
+
+  
     
     
 
